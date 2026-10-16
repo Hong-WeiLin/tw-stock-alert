@@ -35,15 +35,15 @@ QUERIES = [
 ]
 MOPS_URLS = [
     "https://openapi.twse.com.tw/v1/opendata/t187ap04_L",
-    "https://openapi.tpex.org.tw/v1/mopsfin_t187ap04_O",
+    "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O",
 ]
 COMPANY_URLS = [
     "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
-    "https://openapi.tpex.org.tw/v1/mopsfin_t187ap03_O",
+    "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
 ]
 
 
-def get(url, timeout=20):
+def get(url, timeout=10):
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
